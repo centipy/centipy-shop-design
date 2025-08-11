@@ -25,6 +25,9 @@ export const Header = () => {
           <NavLink to="/" end className={navLinkCls}>
             <span className="inline-flex items-center gap-1"><Home className="h-4 w-4" />Inicio</span>
           </NavLink>
+          <NavLink to="/servicios" className={navLinkCls}>Servicios</NavLink>
+          <NavLink to="/planes" className={navLinkCls}>Planes</NavLink>
+          <NavLink to="/plantillas" className={navLinkCls}>Plantillas</NavLink>
           <NavLink to="/categoria/audio" className={navLinkCls}>
             Audio
           </NavLink>

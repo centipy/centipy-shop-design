@@ -14,6 +14,9 @@ const Footer = () => {
           </p>
         </div>
         <nav className="text-sm flex items-center gap-4 md:justify-end">
+          <Link to="/servicios" className="text-muted-foreground hover:text-foreground">Servicios</Link>
+          <Link to="/planes" className="text-muted-foreground hover:text-foreground">Planes</Link>
+          <Link to="/plantillas" className="text-muted-foreground hover:text-foreground">Plantillas</Link>
           <Link to="/sobre" className="text-muted-foreground hover:text-foreground">Sobre</Link>
           <Link to="/contacto" className="text-muted-foreground hover:text-foreground">Contacto</Link>
           <a href="https://centipy.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">Blog</a>

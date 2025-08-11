@@ -12,6 +12,10 @@ import CheckoutPage from "./pages/Checkout";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import CategoryPage from "./pages/Category";
+import ServiciosPage from "./pages/Servicios";
+import PlanesPage from "./pages/Planes";
+import PlantillasPage from "./pages/Plantillas";
+import PlantillaPage from "./pages/Plantilla";
 import { CartProvider } from "@/contexts/CartContext";
 
 const queryClient = new QueryClient();
@@ -30,6 +34,10 @@ const App = () => (
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/categoria/:slug" element={<CategoryPage />} />
+              <Route path="/servicios" element={<ServiciosPage />} />
+              <Route path="/planes" element={<PlanesPage />} />
+              <Route path="/plantillas" element={<PlantillasPage />} />
+              <Route path="/plantilla/:slug" element={<PlantillaPage />} />
               <Route path="/sobre" element={<AboutPage />} />
               <Route path="/contacto" element={<ContactPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
