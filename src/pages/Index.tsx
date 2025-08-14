@@ -9,12 +9,6 @@ import { Link } from "react-router-dom";
 const Index = () => {
   const novedades = products.filter((p) => p.badge === "Nuevo");
   const destacados = products.filter((p) => p.badge === "Destacado");
-  const categorias = [
-    { label: "Audio", slug: "audio" },
-    { label: "Teclados", slug: "teclados" },
-    { label: "Accesorios", slug: "accesorios" },
-    { label: "Smart Home", slug: "smart-home" },
-  ];
 
   const ld = {
     "@context": "https://schema.org",
@@ -55,7 +49,7 @@ const Index = () => {
         <section id="novedades" className="container mx-auto px-4 py-10">
           <header className="mb-6 flex items-end justify-between">
             <h2 className="text-2xl font-semibold">Novedades</h2>
-            <Link to="/categoria/accesorios" className="text-sm text-primary">Ver todo</Link>
+            <Link to="/plantillas" className="text-sm text-primary">Ver todo</Link>
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {(novedades.length ? novedades : products.slice(0,3)).map((p) => (
@@ -67,7 +61,7 @@ const Index = () => {
         <section className="container mx-auto px-4 py-10">
           <header className="mb-6 flex items-end justify-between">
             <h2 className="text-2xl font-semibold">Productos Destacados</h2>
-            <Link to="/categoria/audio" className="text-sm text-primary">Ver todo</Link>
+            <Link to="/servicios" className="text-sm text-primary">Ver todo</Link>
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {(destacados.length ? destacados : products.slice(3,6)).map((p) => (
@@ -76,16 +70,6 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-10">
-          <h2 className="text-2xl font-semibold mb-6">Categorías Populares</h2>
-          <div className="flex flex-wrap gap-3">
-            {categorias.map((c) => (
-              <Link key={c.slug} to={`/categoria/${c.slug}`} className="inline-flex">
-                <Button variant="outline" className="bg-secondary/50 hover:bg-secondary">{c.label}</Button>
-              </Link>
-            ))}
-          </div>
-        </section>
 
         {/* Servicios */}
         <section className="container mx-auto px-4 py-10">
