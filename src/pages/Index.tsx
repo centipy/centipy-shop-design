@@ -38,14 +38,14 @@ const Index = () => {
       </Helmet>
       <Header />
       <main className="">
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_10%_-10%,hsl(var(--brand)/0.25),transparent_60%),radial-gradient(1200px_600px_at_110%_10%,hsl(var(--brand-variant)/0.2),transparent_60%)] pointer-events-none" aria-hidden />
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Soluciones Digitales que Impulsan tu Negocio</h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
+          <div className="container mx-auto px-4 py-16 text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">Soluciones Digitales que Impulsan tu Negocio</h1>
+            <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
               Desde Landing Pages de alto impacto hasta optimización SEO avanzada.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-8 flex items-center justify-center gap-4">
               <Link to="/planes"><Button variant="cta" size="lg">Ver Planes y Servicios</Button></Link>
               <Link to="/plantillas"><Button variant="hero" size="lg">Ver plantillas</Button></Link>
             </div>
